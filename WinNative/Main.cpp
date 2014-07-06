@@ -10,6 +10,7 @@
 int DeviceTest();
 int TimeZoneTest();
 int randomSprinkling();
+int StrTest();
 
 int wmain()
 {
@@ -18,7 +19,8 @@ int wmain()
 	//randomSprinkling();
 	//(new STLTest())->Run();
 	//NetworkTest::Run();
-	RegistryTest::Run();
+	//RegistryTest::Run();
+	StrTest();
 	return 0;
 }
 

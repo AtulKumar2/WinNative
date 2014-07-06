@@ -63,3 +63,23 @@ Str vsprintf(const Str& format, va_list args)
 { 
 	return vsprintf(format.c_str(), args);
 }
+
+// This will crash the application eventually
+int StringArray()
+{
+	const char *s[] = { "a", "b", "c", NULL };
+	const char **p = s;
+	while (*p != NULL) 
+	{
+		printf("string = %s hex = %x\n", *p, *p);
+		printf("pointer = %x\n", p);
+		(*p)++;
+	}
+	return 0;
+}
+
+int StrTest()
+{
+	//StringArray();
+	return 0;
+}

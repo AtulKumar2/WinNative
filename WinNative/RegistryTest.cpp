@@ -31,6 +31,8 @@ namespace RegistryTest
 		return;
 	}
 
+	///
+	///
 	void RegistryTest::Run()
 	{
 		WStr Key(L"SOFTWARE");
@@ -94,6 +96,8 @@ namespace RegistryTest
 		return;
 	}
 	
+	///
+	///
 	bool RegistryTest::CreateKey(const WStr& key)
 	{
 		DWORD dwRet;
@@ -108,6 +112,8 @@ namespace RegistryTest
 		return true;
 	}
 
+	///
+	///
 	bool RegistryTest::CreateKeyEx(const WStr& key, const WStr& subkey)
 	{
 		LONG lRet;
@@ -138,6 +144,8 @@ namespace RegistryTest
 		return true;
 	}
 
+	///
+	///
 	bool RegistryTest::ModifyValueDWORD(const WStr& key, const WStr& valuename, DWORD value)
 	{
 		if (ERROR_SUCCESS != RegOpenKeyEx(_hiveInUse, key.c_str(), 0, 
@@ -155,6 +163,8 @@ namespace RegistryTest
 		return true;
 	}
 
+	///
+	///
 	bool RegistryTest::ChangeKeyPerms(const WStr& key, const WStr& perms)
 	{
 		TCHAR path[MAX_PATH] = {L'\0'};
